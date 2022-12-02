@@ -11,9 +11,9 @@ import AVKit
 struct ContentView: View {
     
     @StateObject private var viewModel = ViewModel()
-    @State private var avPlayer = AVPlayer(url:  Bundle.main.url(forResource: "carVideo", withExtension: "mp4")!)
-    //@State private var currentShape = AnyView(Shape1())
-    @State private var currentShape: EnumShapes = .shape1
+    @State private var currentShape: ShapeType = .shape1
+    @State private var offset = CGSize.zero
+    @State private var hideControls: Bool = false
     
     var body: some View {
         
@@ -21,42 +21,67 @@ struct ContentView: View {
             
             Spacer()
             
-            ZStack {
-                
-                VideoPlayer(player: avPlayer)
-                    .clipShape(viewModel.getShape(shape: currentShape))
-                
-    //            Button {
-    //                if avPlayer.isPlaying {
-    //                    avPlayer.pause()
-    //                } else {
-    //                    avPlayer.play()
-    //                }
-    //            } label: {
-    //                Image(systemName: avPlayer.isPlaying ? "pause.circle" : "play.circle")
-    //                    .resizable()
-    //                    .frame(width: 100,
-    //                           height: 100,
-    //                           alignment: .center)
-    //                    .scaledToFill()
-    //            }
-                
-            }
-            .frame(width: 300, height: 300, alignment: .center)
+            CustomVideoPlayer(player: viewModel.player)
+                .frame(width: 300, height: 300, alignment: .center)
+                .clipShape(currentShape)
+                .overlay(CustomControlsView(viewModel: viewModel, isHideControl: $hideControls)
+                         , alignment: .center)
+                .onTapGesture {
+                    hideControls.toggle()
+                }
+                .gesture(
+                    DragGesture()
+                        .onChanged { gesture in
+                            offset = gesture.translation
+                        }
+                        .onEnded { _ in
+                            if abs(offset.width) > 100 {
+                                // remove the card
+                            } else {
+                                offset = .zero
+                            }
+                        }
+                )
+            
+//            ZStack {
+//
+//                VideoPlayer(player: viewModel.player)
+//                    .clipShape(currentShape)
+//                    .overlay(CustomControlsView(viewModel: viewModel)
+//                             , alignment: .center)
+//
+//    //            Button {
+//    //                if avPlayer.isPlaying {
+//    //                    avPlayer.pause()
+//    //                } else {
+//    //                    avPlayer.play()
+//    //                }
+//    //            } label: {
+//    //                Image(systemName: avPlayer.isPlaying ? "pause.circle" : "play.circle")
+//    //                    .resizable()
+//    //                    .frame(width: 100,
+//    //                           height: 100,
+//    //                           alignment: .center)
+//    //                    .scaledToFill()
+//    //            }
+//
+//            }
+            
          
             Spacer()
             
             ScrollView (.horizontal, showsIndicators: false) {
                  HStack {
-                     ForEach([EnumShapes](viewModel.shapes.keys), id: \.self) { key in
+                     ForEach(viewModel.shapes, id: \.self) { shape in
                          
                          Button {
                              withAnimation {
-                                 currentShape = key
+                                 currentShape = shape
                              }
                          } label: {
                              HStack {
-                                 viewModel.shapes[key]
+                                 shape
+                                     .fill(currentShape == shape ? Color.blue : Color.gray)
                                      .frame(width: 100,
                                             height: 100,
                                             alignment: .center)

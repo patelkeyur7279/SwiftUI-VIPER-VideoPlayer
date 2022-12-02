@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		128EA10E293A702700BD2C3C /* ShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128EA10D293A702700BD2C3C /* ShapeType.swift */; };
+		128EA113293A785600BD2C3C /* CustomVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128EA112293A785600BD2C3C /* CustomVideoPlayer.swift */; };
+		128EA115293A787E00BD2C3C /* CustomControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128EA114293A787E00BD2C3C /* CustomControlsView.swift */; };
 		12A2590B29391CB700E1F315 /* SwiftUI_VIPER_VideoPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A258FB29391CB400E1F315 /* SwiftUI_VIPER_VideoPlayerApp.swift */; };
 		12A2590D29391CB700E1F315 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A258FC29391CB400E1F315 /* ContentView.swift */; };
 		12A2590E29391CB700E1F315 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A258FC29391CB400E1F315 /* ContentView.swift */; };
@@ -37,13 +40,15 @@
 		12A259532939320600E1F315 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A259522939320600E1F315 /* ViewModel.swift */; };
 		12A259552939358C00E1F315 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A259542939358C00E1F315 /* Extenstions.swift */; };
 		12A25957293938D100E1F315 /* EnumShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A25956293938D100E1F315 /* EnumShapes.swift */; };
-		12A25959293939A300E1F315 /* AnyShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A25958293939A300E1F315 /* AnyShape.swift */; };
 		5294227C49893C17A4EABDF6 /* Pods_SwiftUI_VIPER_VideoPlayer__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926A75A83D7CF4D5963F75A4 /* Pods_SwiftUI_VIPER_VideoPlayer__iOS_.framework */; };
 		C46E3FF2D8D57B6217E3A590 /* Pods_SwiftUI_VIPER_VideoPlayer__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C515499F7A39B36C28C8AF4 /* Pods_SwiftUI_VIPER_VideoPlayer__macOS_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0C515499F7A39B36C28C8AF4 /* Pods_SwiftUI_VIPER_VideoPlayer__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUI_VIPER_VideoPlayer__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		128EA10D293A702700BD2C3C /* ShapeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeType.swift; sourceTree = "<group>"; };
+		128EA112293A785600BD2C3C /* CustomVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayer.swift; sourceTree = "<group>"; };
+		128EA114293A787E00BD2C3C /* CustomControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControlsView.swift; sourceTree = "<group>"; };
 		12A258FB29391CB400E1F315 /* SwiftUI_VIPER_VideoPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_VIPER_VideoPlayerApp.swift; sourceTree = "<group>"; };
 		12A258FC29391CB400E1F315 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		12A258FD29391CB700E1F315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,7 +81,6 @@
 		12A259522939320600E1F315 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		12A259542939358C00E1F315 /* Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
 		12A25956293938D100E1F315 /* EnumShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumShapes.swift; sourceTree = "<group>"; };
-		12A25958293939A300E1F315 /* AnyShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyShape.swift; sourceTree = "<group>"; };
 		150AD1C7FBD74E3714BD6F81 /* Pods-SwiftUI+VIPER+VideoPlayer (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI+VIPER+VideoPlayer (macOS).release.xcconfig"; path = "Target Support Files/Pods-SwiftUI+VIPER+VideoPlayer (macOS)/Pods-SwiftUI+VIPER+VideoPlayer (macOS).release.xcconfig"; sourceTree = "<group>"; };
 		22609F729DCCE66D907F39DB /* Pods-SwiftUI+VIPER+VideoPlayer (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI+VIPER+VideoPlayer (iOS).debug.xcconfig"; path = "Target Support Files/Pods-SwiftUI+VIPER+VideoPlayer (iOS)/Pods-SwiftUI+VIPER+VideoPlayer (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		254DF45630A0C77E3B572E6A /* Pods-SwiftUI+VIPER+VideoPlayer (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI+VIPER+VideoPlayer (iOS).release.xcconfig"; path = "Target Support Files/Pods-SwiftUI+VIPER+VideoPlayer (iOS)/Pods-SwiftUI+VIPER+VideoPlayer (iOS).release.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +117,15 @@
 				150AD1C7FBD74E3714BD6F81 /* Pods-SwiftUI+VIPER+VideoPlayer (macOS).release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		128EA10F293A780700BD2C3C /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				128EA112293A785600BD2C3C /* CustomVideoPlayer.swift */,
+				128EA114293A787E00BD2C3C /* CustomControlsView.swift */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 		12A258F529391CB400E1F315 = {
@@ -222,6 +235,7 @@
 		12A2592129391F8D00E1F315 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				128EA10F293A780700BD2C3C /* Player */,
 				12A259312939292C00E1F315 /* Shapes */,
 				12A258FC29391CB400E1F315 /* ContentView.swift */,
 			);
@@ -247,7 +261,7 @@
 				12A2594C29392A5C00E1F315 /* Shape14.swift */,
 				12A2594E29392A6600E1F315 /* Shape15.swift */,
 				12A2595029392A7000E1F315 /* Shape16.swift */,
-				12A25958293939A300E1F315 /* AnyShape.swift */,
+				128EA10D293A702700BD2C3C /* ShapeType.swift */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -410,10 +424,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				12A259232939210700E1F315 /* ProtocolInteractorToPresenter.swift in Sources */,
-				12A25959293939A300E1F315 /* AnyShape.swift in Sources */,
 				12A2594329392A2600E1F315 /* Shape9.swift in Sources */,
 				12A25957293938D100E1F315 /* EnumShapes.swift in Sources */,
 				12A2594D29392A5C00E1F315 /* Shape14.swift in Sources */,
+				128EA10E293A702700BD2C3C /* ShapeType.swift in Sources */,
 				12A2594529392A3100E1F315 /* Shape10.swift in Sources */,
 				12A2594929392A4600E1F315 /* Shape12.swift in Sources */,
 				12A2593F29392A0D00E1F315 /* Shape7.swift in Sources */,
@@ -424,8 +438,10 @@
 				12A259332939294300E1F315 /* Shape1.swift in Sources */,
 				12A259552939358C00E1F315 /* Extenstions.swift in Sources */,
 				12A259352939299400E1F315 /* Shape2.swift in Sources */,
+				128EA115293A787E00BD2C3C /* CustomControlsView.swift in Sources */,
 				12A259282939213500E1F315 /* ProtocolPresenterToRouter.swift in Sources */,
 				12A2590D29391CB700E1F315 /* ContentView.swift in Sources */,
+				128EA113293A785600BD2C3C /* CustomVideoPlayer.swift in Sources */,
 				12A2593B293929F500E1F315 /* Shape5.swift in Sources */,
 				12A259252939211B00E1F315 /* ProtocolPresenterToInteractor.swift in Sources */,
 				12A2594B29392A5100E1F315 /* Shape13.swift in Sources */,
