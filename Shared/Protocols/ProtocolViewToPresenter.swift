@@ -13,4 +13,7 @@ protocol ProtocolViewToPresenter {
     var interactor: ProtocolPresenterToInteractor? {get set}
     var router: ProtocolPresenterToRouter? {get set}
     
+    func getShapes()
+    func changePlayerShape(shape: ShapeType)
+    
 }

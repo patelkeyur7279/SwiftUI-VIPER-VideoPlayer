@@ -8,5 +8,6 @@
 import Foundation
 
 protocol ProtocolPresenterToView {
-    
+    func showShapes(shapes: [ShapeType])
+    func changeShape(shape: ShapeType)
 }

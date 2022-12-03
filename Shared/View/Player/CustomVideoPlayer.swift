@@ -16,11 +16,8 @@ struct CustomVideoPlayer: UIViewControllerRepresentable {
         let view = AVPlayerViewController()
         view.player = player
         view.showsPlaybackControls = false
-//        view.view.layer.contentsGravity = .resizeAspectFill
-        view.videoGravity = AVLayerVideoGravity(rawValue: AVLayerVideoGravity.resizeAspectFill.rawValue)
-        
+        view.videoGravity = .resizeAspectFill
         view.view.layer.masksToBounds = true
-        
         return view
     }
     

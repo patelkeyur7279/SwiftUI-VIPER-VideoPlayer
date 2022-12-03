@@ -12,32 +12,16 @@ import Combine
 
 class ViewModel: ObservableObject {
     
-    @Published var shapes: [ShapeType]
+    private var presenter: Presenter?
+    @Published var shapes = [ShapeType]()
+    @Published var currentShape: ShapeType = .shape1
     
     let player: AVPlayer
     @Published var isPlaying = false
     private var subscriptions: Set<AnyCancellable> = []
     
-    init() {
-        
-        shapes = [
-            .shape1,
-            .shape2,
-            .shape3,
-            .shape4,
-            .shape5,
-            .shape6,
-            .shape7,
-            .shape8,
-            .shape9,
-            .shape10,
-            .shape11,
-            .shape12,
-            .shape13,
-            .shape14,
-            .shape15,
-            .shape16
-        ]
+    init(presenter: Presenter) {
+        self.presenter = presenter
         
         player = AVPlayer(url:  Bundle.main.url(forResource: "carVideo", withExtension: "mp4")!)
         player.play()
@@ -62,6 +46,22 @@ class ViewModel: ObservableObject {
     
     func setCurrentItem(_ item: AVPlayerItem) {
         player.replaceCurrentItem(with: item)
+    }
+    
+    func changePlayerShape(shape: ShapeType) {
+        presenter?.changePlayerShape(shape: shape)
+    }
+    
+}
+
+extension ViewModel: ProtocolPresenterToView {
+    
+    func showShapes(shapes: [ShapeType]) {
+        self.shapes = shapes
+    }
+    
+    func changeShape(shape: ShapeType) {
+        self.currentShape = shape
     }
     
 }

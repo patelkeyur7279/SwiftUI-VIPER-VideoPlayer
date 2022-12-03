@@ -10,8 +10,7 @@ import AVKit
 
 struct ContentView: View {
     
-    @StateObject private var viewModel = ViewModel()
-    @State private var currentShape: ShapeType = .shape1
+    @StateObject var viewModel: ViewModel
     @State private var offset = CGSize.zero
     @State private var hideControls: Bool = false
     
@@ -23,7 +22,7 @@ struct ContentView: View {
             
             CustomVideoPlayer(player: viewModel.player)
                 .frame(width: 300, height: 300, alignment: .center)
-                .clipShape(currentShape)
+                .clipShape(viewModel.currentShape)
                 .overlay(CustomControlsView(viewModel: viewModel, isHideControl: $hideControls)
                          , alignment: .center)
                 .onTapGesture {
@@ -43,31 +42,6 @@ struct ContentView: View {
                         }
                 )
             
-//            ZStack {
-//
-//                VideoPlayer(player: viewModel.player)
-//                    .clipShape(currentShape)
-//                    .overlay(CustomControlsView(viewModel: viewModel)
-//                             , alignment: .center)
-//
-//    //            Button {
-//    //                if avPlayer.isPlaying {
-//    //                    avPlayer.pause()
-//    //                } else {
-//    //                    avPlayer.play()
-//    //                }
-//    //            } label: {
-//    //                Image(systemName: avPlayer.isPlaying ? "pause.circle" : "play.circle")
-//    //                    .resizable()
-//    //                    .frame(width: 100,
-//    //                           height: 100,
-//    //                           alignment: .center)
-//    //                    .scaledToFill()
-//    //            }
-//
-//            }
-            
-         
             Spacer()
             
             ScrollView (.horizontal, showsIndicators: false) {
@@ -76,12 +50,13 @@ struct ContentView: View {
                          
                          Button {
                              withAnimation {
-                                 currentShape = shape
+                                 //currentShape = shape
+                                 viewModel.changeShape(shape: shape)
                              }
                          } label: {
                              HStack {
                                  shape
-                                     .fill(currentShape == shape ? Color.blue : Color.gray)
+                                     .fill(viewModel.currentShape == shape ? Color.blue : Color.gray)
                                      .frame(width: 100,
                                             height: 100,
                                             alignment: .center)
@@ -103,7 +78,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: ViewModel(presenter: Presenter()))
     }
 }
 

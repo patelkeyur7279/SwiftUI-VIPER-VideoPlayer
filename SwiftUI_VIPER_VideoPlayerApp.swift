@@ -11,7 +11,11 @@ import SwiftUI
 struct SwiftUI_VIPER_VideoPlayerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                VStack {
+                    Router.createModule()
+                }
+            }
         }
     }
 }

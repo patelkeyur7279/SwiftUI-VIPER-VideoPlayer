@@ -10,6 +10,9 @@
 		128EA10E293A702700BD2C3C /* ShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128EA10D293A702700BD2C3C /* ShapeType.swift */; };
 		128EA113293A785600BD2C3C /* CustomVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128EA112293A785600BD2C3C /* CustomVideoPlayer.swift */; };
 		128EA115293A787E00BD2C3C /* CustomControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128EA114293A787E00BD2C3C /* CustomControlsView.swift */; };
+		12909767293BDEE00097300F /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12909766293BDEE00097300F /* Interactor.swift */; };
+		12909769293BDF140097300F /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12909768293BDF140097300F /* Presenter.swift */; };
+		1290976B293BE35F0097300F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1290976A293BE35F0097300F /* Router.swift */; };
 		12A2590B29391CB700E1F315 /* SwiftUI_VIPER_VideoPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A258FB29391CB400E1F315 /* SwiftUI_VIPER_VideoPlayerApp.swift */; };
 		12A2590D29391CB700E1F315 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A258FC29391CB400E1F315 /* ContentView.swift */; };
 		12A2590E29391CB700E1F315 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A258FC29391CB400E1F315 /* ContentView.swift */; };
@@ -49,6 +52,9 @@
 		128EA10D293A702700BD2C3C /* ShapeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeType.swift; sourceTree = "<group>"; };
 		128EA112293A785600BD2C3C /* CustomVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayer.swift; sourceTree = "<group>"; };
 		128EA114293A787E00BD2C3C /* CustomControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControlsView.swift; sourceTree = "<group>"; };
+		12909766293BDEE00097300F /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		12909768293BDF140097300F /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		1290976A293BE35F0097300F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		12A258FB29391CB400E1F315 /* SwiftUI_VIPER_VideoPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_VIPER_VideoPlayerApp.swift; sourceTree = "<group>"; };
 		12A258FC29391CB400E1F315 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		12A258FD29391CB700E1F315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -206,6 +212,7 @@
 		12A2591D29391F6500E1F315 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				12909766293BDEE00097300F /* Interactor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -213,6 +220,7 @@
 		12A2591E29391F7700E1F315 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				12909768293BDF140097300F /* Presenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -220,6 +228,7 @@
 		12A2591F29391F7F00E1F315 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				1290976A293BE35F0097300F /* Router.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -431,10 +440,12 @@
 				12A2594529392A3100E1F315 /* Shape10.swift in Sources */,
 				12A2594929392A4600E1F315 /* Shape12.swift in Sources */,
 				12A2593F29392A0D00E1F315 /* Shape7.swift in Sources */,
+				1290976B293BE35F0097300F /* Router.swift in Sources */,
 				12A2594129392A1800E1F315 /* Shape8.swift in Sources */,
 				12A2595129392A7000E1F315 /* Shape16.swift in Sources */,
 				12A2594F29392A6600E1F315 /* Shape15.swift in Sources */,
 				12A2594729392A3C00E1F315 /* Shape11.swift in Sources */,
+				12909767293BDEE00097300F /* Interactor.swift in Sources */,
 				12A259332939294300E1F315 /* Shape1.swift in Sources */,
 				12A259552939358C00E1F315 /* Extenstions.swift in Sources */,
 				12A259352939299400E1F315 /* Shape2.swift in Sources */,
@@ -445,6 +456,7 @@
 				12A2593B293929F500E1F315 /* Shape5.swift in Sources */,
 				12A259252939211B00E1F315 /* ProtocolPresenterToInteractor.swift in Sources */,
 				12A2594B29392A5100E1F315 /* Shape13.swift in Sources */,
+				12909769293BDF140097300F /* Presenter.swift in Sources */,
 				12A2593D29392A0100E1F315 /* Shape6.swift in Sources */,
 				12A2592A2939214800E1F315 /* ProtocolPresenterToView.swift in Sources */,
 				12A25937293929C000E1F315 /* Shape3.swift in Sources */,

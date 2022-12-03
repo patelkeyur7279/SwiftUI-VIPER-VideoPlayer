@@ -11,4 +11,6 @@ protocol ProtocolPresenterToInteractor {
     
     var presenter: ProtocolInteractorToPresenter? {get set}
    
+    func getShapes()
+    func changeShape(shape: ShapeType)
 }
